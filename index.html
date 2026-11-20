@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments Hub</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #c7f0ee;
+            color: #1a202c;
+            line-height: 1.5;
+            padding: 2rem 1.25rem;
+        }
+
+        .hub-container {
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        .header-card {
+            background: rgba(255, 255, 255, 0.88);
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            margin-bottom: 1.5rem;
+        }
+
+        .header-card h1 {
+            font-size: 1.65rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .header-card p {
+            color: #4a5568;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .top-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            padding-top: 0.85rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .top-nav a {
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: #2c3e50;
+            background: #e4f7f6;
+            padding: 0.35rem 0.75rem;
+            border-radius: 8px;
+            transition: background 0.15s ease, color 0.15s ease;
+        }
+
+        .top-nav a:hover,
+        .top-nav a.active {
+            background: #2c3e50;
+            color: #ffffff;
+        }
+
+        .assignments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1rem;
+        }
+
+        .assignment-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-decoration: none;
+            color: inherit;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            padding: 1.25rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.95);
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .assignment-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+        }
+
+        .badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #2c3e50;
+            background: #c7f0ee;
+            padding: 0.2rem 0.6rem;
+            border-radius: 999px;
+            margin-bottom: 0.65rem;
+            width: fit-content;
+        }
+
+        .assignment-card h2 {
+            font-size: 1.1rem;
+            color: #2c3e50;
+            margin-bottom: 0.35rem;
+        }
+
+        .assignment-card p {
+            font-size: 0.88rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="hub-container">
+        <header class="header-card">
+            <h1>Student Assignments</h1>
+            <p>Choose an assignment module below to open its page.</p>
+            <nav class="top-nav">
+                <a href="index.html" class="active">Home</a>
+                <a href="conversion.html">#1 Conversion</a>
+                <a href="tax.html">#2 Income Tax</a>
+                <a href="loops.html">#3 Loops</a>
+                <a href="payroll.html">#4 Payroll</a>
+            </nav>
+        </header>
+
+        <main class="assignments-grid">
+            <a href="conversion.html" class="assignment-card">
+                <div>
+                    <span class="badge">Assignment #1</span>
+                    <h2>Unit Conversion</h2>
+                    <p>Convert Celsius, Fahrenheit, Meters, and Feet.</p>
+                </div>
+            </a>
+
+            <a href="tax.html" class="assignment-card">
+                <div>
+                    <span class="badge">Assignment #2</span>
+                    <h2>Income Tax Calculator</h2>
+                    <p>Compute tax based on net taxable income brackets.</p>
+                </div>
+            </a>
+
+            <a href="loops.html" class="assignment-card">
+                <div>
+                    <span class="badge">Assignment #3</span>
+                    <h2>Loops (First N Numbers)</h2>
+                    <p>Factorial (While), Sum (Do-While), and Average (For).</p>
+                </div>
+            </a>
+
+            <a href="payroll.html" class="assignment-card">
+                <div>
+                    <span class="badge">Assignment #4</span>
+                    <h2>Simple Payroll</h2>
+                    <p>Add and delete employee records in a payroll table.</p>
+                </div>
+            </a>
+        </main>
+    </div>
+</body>
+</html>
